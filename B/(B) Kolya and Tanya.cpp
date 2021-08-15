@@ -1,20 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
-int main() {
-
+int main()
+{
 	ios_base::sync_with_stdio(0), cin.tie(0); cout.tie(0);
 	//freopen("input.txt", "r", stdin);
 	//freopen("output.txt", "w", stdout);
-	ll t;
-	cin >> t;
-	while (t-- > 0)
-	{
-		ll n;
-		string s;
-		cin >> n >> s;
-		vector<ll>ones;
-		vector<ll>v_z(n+1);
-		vector<set<ll>>v_n(n + 1);
-	}
+	ll n,a=1,b=1,mod= 1e9 + 7;
+	cin >> n;
+
+	for (int i = 0; i < n * 3; i++)
+		a = (a * 3) % mod;
+
+	for (int i = 0; i < n; i++)
+		b = (b * 7) % mod;
+
+	cout << (a-b+mod)%mod;
 }

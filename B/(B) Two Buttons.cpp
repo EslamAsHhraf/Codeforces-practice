@@ -6,15 +6,26 @@ int main() {
 	ios_base::sync_with_stdio(0), cin.tie(0); cout.tie(0);
 	//freopen("input.txt", "r", stdin);
 	//freopen("output.txt", "w", stdout);
-	ll t;
-	cin >> t;
-	while (t-- > 0)
+	ll n, m,num=0;
+	cin >> n >> m;
+	while (n != m)
 	{
-		ll n;
-		string s;
-		cin >> n >> s;
-		vector<ll>ones;
-		vector<ll>v_z(n+1);
-		vector<set<ll>>v_n(n + 1);
+		if (n > m)
+		{
+			m++;
+		}
+		else
+		{
+			if (m % 2 == 0)
+			{
+				m /= 2;
+			}
+			else
+			{
+				m++;
+			}
+		}
+		num++;
 	}
+	cout << num;
 }
